@@ -1,0 +1,152 @@
+*************************************
+//
+//   Button
+//
+// *************************************
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+$btn-background: #4e4e5b !default
+$btn-borderRadius: 2px !default
+$btn--error-background: red !default
+$btn-fontSize: 16px !default
+$btn-whitespace: 20px !default
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+%btn, .btn {
+  background-color: $btn-background;
+  border: none;
+  border-radius: $btn-borderRadius;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: $btn-font-Size;
+  height: 3em;
+  line-height: 3;
+  margin: 0;
+  overflow: visible;
+  padding-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited{
+        text-decoration:none;
+        color:#fff;
+    }
+
+    &:hover{
+        box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    &:active,
+    &:focus{
+        outline:none;
+        box-shadow:0 0 5px rgba(0, 0, 0, 0.5) inset;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+
+// Sizes
+.btn {
+    &--small{
+      height: 2em;
+      line-height: 2;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+
+
+    }
+    &--large{
+      height: 4em;
+      line-height: 4;
+      padding-left: 1.5em;
+      padding-right:1.5em;
+;
+    }
+    &--huge{
+      height: 5em;
+      line-height: 5;
+      padding-left: 2em;
+      padding-right: 2em;      
+    }  
+}
+.btn {
+  &--full{
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+// font-sizes
+
+.btn {
+  &--alpha{
+    font-size: 3rem;
+  }
+  &--beta{
+    font-size: 2rem;
+  }
+  &--gamma{
+    font-size: 1rem;
+  }
+}
+
+// buttton inherits sizes
+.btn {
+  &--natural{
+    font-size: inherit;
+    height: auto;
+    line-height: inherit;    
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    vertical-align: baseline;    
+  }
+}
+
+// functions
+
+.btn {
+  &--primary{}
+  &--secondary{}
+  &--tertiary{}
+}
+
+.btn {
+  &--inactive,
+    &:hover,
+    &:active,
+    &:focus{
+        background-color: $btn--error-background;
+        box-shadow: none;
+        color: #777;
+        cursor: default;
+    }
+}
+// styles
+.btn {
+  &--soft{
+    border-radius: 5em;
+  }
+  &--hard{
+    border-radius: 0;
+  }
+}
